@@ -127,9 +127,10 @@ Solve Exercise 6 here:
 console.log('\n')
 console.log('Exercise 6:')
 
-// creating a function since this logic is needed for both exercise 6, 12 and 15
-function setCompleted(num) {
+// creating a function since this logic is needed for exercise 6, 12 and 15
+function setCompletedGym(num) {
     game.gyms.forEach(gym => {
+        // set the value of completed to true if gym is below provided number and is not already completed
         if (gym.difficulty < num && !gym.completed) {
             gym.completed = true;
         }
@@ -137,7 +138,7 @@ function setCompleted(num) {
 
 }
 
-setCompleted(3);
+setCompletedGym(3);
 
 console.log(game.gyms);
 
@@ -218,7 +219,7 @@ console.log('\n')
 console.log('Exercise 9:')
 
 pokemon.forEach(poke => {
-    if (poke.starter == true) {
+    if (poke.starter === true) {
         console.log(poke.name);
     }
 })
@@ -284,7 +285,7 @@ console.log('\n')
 console.log('Exercise 12:')
 
 
-setCompleted(6); // calling function created in exercise 6
+setCompletedGym(6); // calling function created in exercise 6
 
 console.log(game.gyms)
 
@@ -365,7 +366,7 @@ Solve Exercise 15 here:
 console.log('\n')
 console.log('Exercise 15:')
 
-setCompleted(8); // calling the function created in exercise 6
+setCompletedGym(8); // calling the function created in exercise 6
 
 game.gymStatus(); // checking for updated status
 
